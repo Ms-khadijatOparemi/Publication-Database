@@ -2,11 +2,9 @@ CREATE DATABASE MagazineDB;
 
 USE MagazineDB;
 
-DROP TABLE Subscriber
-
 CREATE TABLE Subscriber(
 	subscriber_id INT PRIMARY KEY
-IDENTITY(1,1),
+IDENTITY(1,1), #This is to automate the generation of ID
 	subscriber_name VARCHAR(100) NOT NULL,
 	email VARCHAR(255) UNIQUE, 
 	birth_date DATE,
@@ -15,8 +13,6 @@ IDENTITY(1,1),
 	category VARCHAR(40),
 	active BIT
 );
-
-
 
  CREATE TABLE Author
 		(author_id INT PRIMARY KEY
